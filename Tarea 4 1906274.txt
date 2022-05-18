@@ -1,0 +1,27 @@
+import requests
+import csv
+from bs4 import BeautifulSoup
+# Se escribira la pagina 
+url = "http://quotes.toscrape.com/"
+response = requests.get(url)
+# analizar el archivo txt
+html = BeautifulSoup(response.text, 'html.parser')
+# ahora se extraeran las citas del archivo ademas de los autores
+quotes_html = html.find_all('span', class_="text")
+authors_html = html.find_all('small', class_="author")
+# Crear una lista de las citas
+quotes = list()
+for quote in quotes_html:
+    quotes.append(quote.text)
+# Crear una lista de los autores
+authors = list()
+for author in authors_html:
+    authors.append(author.text) 
+# Para hacer el test: combinar y mostrar las entradas de ambas listas
+for t in zip(quotes, authors):
+    print(t)
+# Guardar las citas y los autores en un archivo CSV en el directorio actual
+# Abrir el archivo con Excel / LibreOffice, etc.
+with open('./zitate.csv', 'w') as csv_file:
+    csv_writer = csv.writer(csv_file, dialect='excel')
+    csv_writer.writerows(zip(quotes, authors))
