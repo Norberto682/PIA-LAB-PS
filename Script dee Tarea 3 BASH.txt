@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Ejemplo de Menu en BASH
+# Menu de escaneo de puertos en BASH
 #
 date
     echo "---------------------------"
