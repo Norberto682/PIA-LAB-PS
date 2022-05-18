@@ -1,4 +1,3 @@
-#Este es el segundo script anexado 
 #!/bin/bash
 #
 # Menu de escaneo de puertos en BASH
