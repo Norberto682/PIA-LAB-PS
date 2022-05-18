@@ -1,3 +1,4 @@
+#Este es el primer script adjuntado y requerido
 #Se crea el menu para poder escanerar la subred y los puertos ademas de otorgarn la hora y la opcion de salir
 Write-host Menú
 Write-host ====
