@@ -1,3 +1,5 @@
+#Es el tercer script anexado al PIA
+#se importan todos los modulos que sean necesarios para trabajar con el programa
 import requests
 import csv
 from bs4 import BeautifulSoup
