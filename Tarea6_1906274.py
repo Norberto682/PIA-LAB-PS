@@ -1,4 +1,4 @@
-#Se importa los modulos necesarios previamente instalados en cmd como pip install python-nmap
+#Se importan los modulos necesarios previamente instalados en cmd como pip install python-nmap
 import nmap
 #Se realiza el inicio y limite de los puertos a escanear
 begin=10
